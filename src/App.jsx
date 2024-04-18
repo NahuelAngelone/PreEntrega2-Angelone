@@ -1,6 +1,6 @@
 
-import NavBar from "./componentes/NavBar";
-import ItemListContainer from "./componentes/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <NavBar/>
       </nav>
       <div>
-        <ItemListContainer/>
+        <ItemListContainer greeting={'Bienvenidos a mi Store de Pokemon'}/>
       </div>
     </div>
   );
