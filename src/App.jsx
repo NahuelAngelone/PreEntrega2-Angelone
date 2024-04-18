@@ -1,16 +1,18 @@
-import CounterApp from "./CounterApp";
-import Greeting from "./Greeting";
-import Menu from "./Menu";
+
+import NavBar from "./componentes/NavBar";
+import ItemListContainer from "./componentes/ItemListContainer";
 
 function App() {
   return (
     <div>
-      <Greeting/>
-      <CounterApp value={0}/>
-      <h1>mi app</h1>
-      <Menu/>
+      <nav>
+        <NavBar/>
+      </nav>
+      <div>
+        <ItemListContainer/>
+      </div>
     </div>
-  )
+  );
 }
 
 export default App;
