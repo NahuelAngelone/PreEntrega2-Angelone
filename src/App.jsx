@@ -1,16 +1,11 @@
-
-import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <div>
-      <nav>
-        <NavBar/>
-      </nav>
-      <div>
-        <ItemListContainer greeting={'Bienvenidos a mi Store de Pokemon'}/>
-      </div>
+      <NavBar/>
+      <ItemListContainer greeting={'Bienvenidos a mi Store de Pokemon'}/>
     </div>
   );
 }
