@@ -1,4 +1,5 @@
 import { useState } from "react"
+import CounterView from "./CounterView"
 
 const Counter = () => {
   const [contador, setContador] = useState(0)
@@ -10,13 +11,9 @@ const Counter = () => {
     setContador (contador - 1)
   }
 
-  return(
-    <div>
-      <p>Contador: {contador} </p>  
-      <button onClick={sumar}>+</button>
-      <button onClick={restar}>-</button>
-    </div>
-  )
+  return (
+    <CounterView contador={contador} sumar={sumar} restar={restar}/>
+  )  
 }       
 
 export default Counter
