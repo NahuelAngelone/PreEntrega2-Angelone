@@ -5,9 +5,9 @@ import Counter from "./components/Counter/Counter";
 function App() {
   return (
     <div>
-      <NavBar/>
-      <ItemListContainer greeting={'Bienvenidos a mi Store de Pokemon'}/>
-      <Counter/>
+      <NavBar />
+      <ItemListContainer greeting={'Bienvenidos a mi Store de Pokemon'} />
+      <Counter />
     </div>
   );
 }

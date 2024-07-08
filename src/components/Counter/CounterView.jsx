@@ -1,8 +1,8 @@
-const CounterView = ({ contador, sumar, restar}) => {
+const CounterView = ({ contador, sumar, restar }) => {
 
-  return(
+  return (
     <div>
-      <p>Contador: {contador} </p>  
+      <p>Contador: {contador} </p>
       <button onClick={sumar}>+</button>
       <button onClick={restar}>-</button>
     </div>
