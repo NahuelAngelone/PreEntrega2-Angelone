@@ -1,7 +1,7 @@
 
 
 
-const productos = [
+const cartas = [
 	{
 		id: "1",
 		nombre: "Blastoise",
@@ -84,3 +84,13 @@ const productos = [
 		imagen: "https://example.com/images/celebi_v.jpg"
 	}
 ]
+
+const obtenerProductos = () => {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve(cartas)
+		}, 2000)
+	})
+}
+
+export default obtenerProductos;
