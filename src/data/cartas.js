@@ -9,7 +9,7 @@ const cartas = [
 		precio: "24.99",
 		categoria: "agua",
 		stock: "8",
-		imagen: "https://example.com/images/blastoise_ex.jpg"
+		imagen: "https://pkmncards.com/wp-content/uploads/clb_en_003-blastoise.jpg"
 	},
 	{
 		id: "2",
@@ -18,7 +18,7 @@ const cartas = [
 		precio: "27.99",
 		categoria: "agua",
 		stock: "6",
-		imagen: "https://example.com/images/gyarados_gx.jpg"
+		imagen: "https://www.pokemon.com/static-assets/content-assets/cms2/img/cards/web/XY12/XY12_EN_34.png"
 	},
 	{
 		id: "3",
@@ -27,7 +27,7 @@ const cartas = [
 		precio: "22.99",
 		categoria: "agua",
 		stock: "9",
-		imagen: "https://example.com/images/lapras_v.jpg"
+		imagen: "https://www.pokemon.com/static-assets/content-assets/cms2/img/cards/web/XY1/XY1_EN_35.png"
 	},
 	{
 		id: "4",
@@ -36,7 +36,7 @@ const cartas = [
 		precio: "29.99",
 		categoria: "fuego",
 		stock: "5",
-		imagen: "https://example.com/images/charizard_gx.jpg"
+		imagen: "https://pkmncards.com/wp-content/uploads/clc_en_003-charizard.jpg"
 	},
 	{
 		id: "5",
@@ -45,7 +45,7 @@ const cartas = [
 		precio: "25.99",
 		categoria: "fuego",
 		stock: "7",
-		imagen: "https://example.com/images/moltres_ex.jpg"
+		imagen: "https://pkmncards.com/wp-content/uploads/h20.jpg"
 	},
 	{
 		id: "6",
@@ -54,7 +54,7 @@ const cartas = [
 		precio: "20.99",
 		categoria: "fuego",
 		stock: "10",
-		imagen: "https://example.com/images/flareon_v.jpg"
+		imagen: "https://pkmncards.com/wp-content/uploads/h07.jpg"
 	},
 	{
 		id: "7",
@@ -63,7 +63,7 @@ const cartas = [
 		precio: "26.99",
 		categoria: "planta",
 		stock: "6",
-		imagen: "https://example.com/images/venusaur_vmax.jpg"
+		imagen: "https://pkmncards.com/wp-content/uploads/clv_en_003-venusaur-1.jpg"
 	},
 	{
 		id: "8",
@@ -72,7 +72,7 @@ const cartas = [
 		precio: "23.99",
 		categoria: "planta",
 		stock: "8",
-		imagen: "https://example.com/images/leafeon_gx.jpg"
+		imagen: "https://pkmncards.com/wp-content/uploads/en_US-Promo_SM-SM237-leafeon.jpg"
 	},
 	{
 		id: "9",
@@ -81,7 +81,7 @@ const cartas = [
 		precio: "21.99",
 		categoria: "planta",
 		stock: "7",
-		imagen: "https://example.com/images/celebi_v.jpg"
+		imagen: "https://pkmncards.com/wp-content/uploads/celebi-skyridge-sk-145.jpg"
 	}
 ]
 
