@@ -4,14 +4,24 @@ const addToCart = (contador) => {
 	console.log(contador)
 }
 
-const ItemDetailView = ({carta}) => {
+const ItemDetailView = ({ carta }) => {
 	return (
-		<div>
-			<img src={carta.imagen} alt="" width={300} />
-			<h2>{carta.nombre}</h2>
-			<h3>{carta.descripción}</h3>
-			<Counter stock={carta.stock} addToCart={addToCart}/>
-		</div>
+		<div className="card mb-3" style={{ maxWidth: '540px' }}>
+			<div className="row g-0">
+				<div className="col-md-4">
+					<img src={carta.imagen} alt="" width={300} className="img-fluid rouned-start" />
+				</div>
+				<div className="col-md-8">
+					<div className="card-body">
+						<h4 className="card-title">{carta.nombre}</h4>
+						<p className="car-text">{carta.descripción}</p>
+						<p className="car-text">${carta.precio}</p>
+						<Counter stock={carta.stock} addToCart={addToCart} />
+					</div>
+				</div>
+			</div>
+		</div >
+
 	)
 }
 
