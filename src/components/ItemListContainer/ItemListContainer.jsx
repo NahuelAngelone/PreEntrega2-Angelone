@@ -2,17 +2,24 @@ import obtenerProductos from "../../data/cartas.js";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList.jsx";
 import useLoading from "../../hooks/useLoading.jsx";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({ greeting }) => {
 
   const [cartas, setCartas] = useState([])
   const { loading, loadingOn, loadingOff } = useLoading()
+  const { idCategoria } = useParams()
 
   useEffect(() => {
     loadingOn()
     obtenerProductos()
       .then((respuesta) => {
-        setCartas(respuesta)
+        if (idCategoria) {
+          const cardFilter = respuesta.filter ( (carta) => carta.categoria === idCategoria)
+          setCartas(cardFilter)
+        } else {
+          setCartas(respuesta)
+        }
       })
       .catch((error) => {
         error.log(error)
@@ -20,8 +27,8 @@ const ItemListContainer = ({ greeting }) => {
       .finally(() => {
         loadingOff()
       })
-  }, []);
-  
+  }, [idCategoria]);
+
   return (
     <div>
       <h1>{greeting}</h1>

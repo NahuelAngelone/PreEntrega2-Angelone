@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Item = ({ carta }) => {
 	return (
-		<div>
+		<Link  to={`/detalle/${carta.id}`}>
 			<img src={carta.imagen} alt="" width={100} />
 			{carta.nombre}
-		</div>
+		</Link>
+		
 	)
 }
 
