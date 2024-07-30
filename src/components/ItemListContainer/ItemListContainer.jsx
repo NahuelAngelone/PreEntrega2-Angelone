@@ -6,7 +6,7 @@ import useLoading from "../../hooks/useLoading.jsx";
 const ItemListContainer = ({ greeting }) => {
 
   const [cartas, setCartas] = useState([])
-  const { loading, loadingOn, loadingOff, loadingView } = useLoading()
+  const { loading, loadingOn, loadingOff } = useLoading()
 
   useEffect(() => {
     loadingOn()
@@ -26,7 +26,7 @@ const ItemListContainer = ({ greeting }) => {
     <div>
       <h1>{greeting}</h1>
       {
-        loading ? (loadingView) : <ItemList cartas={cartas} />
+        loading ? <div>Loading...</div> : <ItemList cartas={cartas} />
       }
     </div>
   )

@@ -12,9 +12,8 @@ const useLoading = () => {
     setLoading(false)
   }
 
-  const loadingView = <div>Loading...</div>
 
-  return { loading, loadingOn, loadingOff, loadingView}
+  return { loading, loadingOn, loadingOff }
 
 } 
 
