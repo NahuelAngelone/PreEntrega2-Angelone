@@ -6,7 +6,7 @@ const addToCart = (contador) => {
 
 const ItemDetailView = ({ carta }) => {
 	return (
-		<div className="card mb-3" style={{ maxWidth: '540px' }}>
+		<div className="card mb-3 bg-secondary" style={{ maxWidth: '540px', padding: '10px' }}>
 			<div className="row g-0">
 				<div className="col-md-4">
 					<img src={carta.imagen} alt="" width={300} className="img-fluid rouned-start" />

@@ -31,7 +31,7 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <div>
-      <h1>{greeting}</h1>
+      <h1 className="text-center align-items-center justify-content-center">{greeting}</h1>
       {
         loading ? <div>Loading...</div> : <ItemList cartas={cartas} />
       }
