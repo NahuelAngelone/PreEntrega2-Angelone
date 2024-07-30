@@ -15,6 +15,7 @@ const Counter = ({ stock, addToCart }) => {
     setContador(contador - 1)
     }
   }
+  
 
   return (
     <CounterView contador={contador} sumar={sumar} restar={restar} addToCart={addToCart}/>
