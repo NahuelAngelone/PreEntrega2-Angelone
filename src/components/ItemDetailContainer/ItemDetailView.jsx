@@ -1,10 +1,16 @@
 import Counter from "../Counter/Counter";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-const addToCart = (contador) => {
-	console.log(contador)
-}
 
 const ItemDetailView = ({ carta }) => {
+	const {agregarProducto} = useContext(CartContext)
+
+	const addToCart = (contador) => {
+		const productoCarrito = {...carta, cantidad: contador}
+		agregarProducto(productoCarrito)
+	}
+
 	return (
 		<div className="card mb-3 bg-secondary" style={{ maxWidth: '540px', padding: '10px' }}>
 			<div className="row g-0">
