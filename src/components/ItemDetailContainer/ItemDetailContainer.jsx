@@ -3,6 +3,7 @@ import obtenerProductos from "../../data/cartas.js";
 import ItemDetailView from "./ItemDetailView.jsx";
 import useLoading from "../../hooks/useLoading.jsx";
 import { useParams } from "react-router-dom";
+import { BeatLoader } from "react-spinners";
 
 const ItemDetailContainer = () => {
 	const [carta, setCartas] = useState({})
@@ -23,7 +24,7 @@ const ItemDetailContainer = () => {
 
 	return (
 		<div>	
-			{loading ? <div>Loading...</div> : <ItemDetailView carta={carta} />}
+			{loading ? <div><BeatLoader/></div> : <ItemDetailView carta={carta} />}
 		</div>
 	)
 }

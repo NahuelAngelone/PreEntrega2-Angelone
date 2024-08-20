@@ -6,7 +6,24 @@ const CartProvider = ({ children }) => {
 	const [carrito, setCarrito] = useState([])
 
 	const agregarProducto = (productoNuevo) => {
-		setCarrito([...carrito, productoNuevo])
+		const condicional = verificarProducto(productoNuevo.id)
+		if (condicional) {
+			let nuevoCarrito = [...carrito]
+			nuevoCarrito.forEach((productoCarrito) => {
+				if (productoCarrito.id === productoNuevo.id) {
+					productoCarrito.cantidad = productoCarrito.cantidad + productoNuevo.cantidad
+				}
+			})
+
+			setCarrito(nuevoCarrito)
+		} else {
+			setCarrito([...carrito, productoNuevo])
+		}
+	}
+
+	const verificarProducto = (idProducto) => {
+		const condicional = carrito.some((productoCarrito) => productoCarrito.id === idProducto)
+		return condicional
 	}
 
 	const cantidadTotal = () => {

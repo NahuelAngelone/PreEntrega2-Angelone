@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList.jsx";
 import useLoading from "../../hooks/useLoading.jsx";
 import { useParams } from "react-router-dom";
+import { BeatLoader } from "react-spinners";
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -33,7 +34,7 @@ const ItemListContainer = ({ greeting }) => {
     <div>
       <h1 className="text-center align-items-center justify-content-center">{greeting}</h1>
       {
-        loading ? <div>Loading...</div> : <ItemList cartas={cartas} />
+        loading ? <div><BeatLoader/></div> : <ItemList cartas={cartas} />
       }
     </div>
   )
