@@ -28,7 +28,7 @@ const ItemDetailView = ({ carta }) => {
 						{contadorOff ? (
 							<Counter stock={carta.stock} addToCart={addToCart} />
 						) : (
-							<Link to="/cart">Ir al carrito</Link>
+							<Link className="btn btn-dark" to="/cart">Ir al carrito</Link>
 						)}
 					</div>
 				</div>

@@ -31,9 +31,9 @@ const Checkout = () => {
 			total: precioTotal(),
 		};
 		const response = await validateForm(datosForm)
-		if (response.status === "success"){
+		if (response.status === "success") {
 			sendOrder(orden);
-		}else{
+		} else {
 			toast.warning(response.message)
 		}
 	};

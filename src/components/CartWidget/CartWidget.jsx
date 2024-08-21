@@ -10,10 +10,15 @@ const CartWidget = () => {
   let cantidad = cantidadTotal()
 
   return (
-    <Link to='/cart' className='d-flex flex-row'>
-      <img src={cart} alt="Cart-Widget" height={25} />
-      <p>{cantidad > 0 && cantidad}</p>
-    </Link>
+    <div className="d-flex align-items-center justify-content-center">
+      <Link to='/cart' className='d-flex align-items-center text-decoration-none'>
+        <img src={cart} alt="Cart-Widget" height={35} />
+        <span className='text-white ms-2'>
+          {cantidad > 0 && cantidad}
+        </span>
+      </Link>
+    </div>
+
   )
 }
 

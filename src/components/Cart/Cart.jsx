@@ -9,9 +9,9 @@ const Cart = () => {
 
 	if(carrito.length ===0){
 		return (
-			<div>
-				Carrito vacio
-				<Link to="/">Inicio</Link>
+			<div className="d-flex justify-content-center">
+				<h2>Carrito vacio</h2>
+				<Link to="/" className="btn btn-dark">Inicio</Link>
 			</div>
 		)
 	}
