@@ -13,6 +13,7 @@ const Checkout = () => {
 		nombre: "",
 		telefono: "",
 		email: "",
+		emailConfirm: "",
 	});
 	const [idOrden, setIdOrder] = useState(null)
 	const { carrito, precioTotal } = useContext(CartContext)

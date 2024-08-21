@@ -11,6 +11,9 @@ const CheckoutView = ({ datosForm, handleChangeInput, handleSubmitForm }) => {
 			<label>Email:</label>
 			<input type="text" name="email" value={datosForm.email} onChange={handleChangeInput} />
 
+			<label>Confirmacion de Email:</label>
+			<input type="text" name="emailConfirm" value={datosForm.emailConfirm} onChange={handleChangeInput} />
+
 			<button type="submit">Finalizar Compra</button>
 
 		</form>
