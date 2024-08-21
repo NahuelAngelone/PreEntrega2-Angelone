@@ -3,6 +3,8 @@ import { CartContext } from "../../context/CartContext";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
 import CheckoutView from "./CheckoutView";
 import db from "../../db/db";
+import validateForm from "../../utils/validacionForm";
+import { toast } from "react-toastify";
 
 
 
@@ -19,7 +21,7 @@ const Checkout = () => {
 		setDatosForm({ ...datosForm, [event.target.name]: event.target.value })
 	};
 
-	const handleSubmitForm = (event) => {
+	const handleSubmitForm = async (event) => {
 		event.preventDefault();
 		const orden = {
 			comprador: { ...datosForm },
@@ -27,8 +29,12 @@ const Checkout = () => {
 			fecha: Timestamp.fromDate(new Date()),
 			total: precioTotal(),
 		};
-
-		sendOrder(orden);
+		const response = await validateForm(datosForm)
+		if (response.status === "success"){
+			sendOrder(orden);
+		}else{
+			toast.warning(response.message)
+		}
 	};
 
 	const sendOrder = async (orden) => {

@@ -5,6 +5,8 @@ import Cart from "./components/Cart/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import Checkout from "./components/Checkout/Checkout";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <NavBar />
+          <ToastContainer theme="dark" />
 
           <Routes>
             <Route path="/" element={<ItemListContainer greeting={'Bienvenidos a mi Store de Pokemon'} />} />
