@@ -14,25 +14,32 @@ const ItemListContainer = ({ greeting }) => {
   const { idCategoria } = useParams()
 
   const getProducts = async () => {
-    const productosRef = collection(db, "productos")
-    const dataDb = await getDocs(productosRef)
-    const data = dataDb.docs.map((productDb) => {
-      return { id: productDb.id, ...productDb.data() };
-    })
-    setCartas(data)
+    try {
+      const productosRef = collection(db, "productos")
+      const dataDb = await getDocs(productosRef)
+      const data = dataDb.docs.map((productDb) => {
+        return { id: productDb.id, ...productDb.data() };
+      })
+      setCartas(data)
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const getProductsByCat = async () => {
-    const productosRef = collection(db, "productos")
-    const q = query(productosRef, where("categoria", "==", idCategoria))
-    const dataDb = await getDocs(q)
+    try {
+      const productosRef = collection(db, "productos")
+      const q = query(productosRef, where("categoria", "==", idCategoria))
+      const dataDb = await getDocs(q)
 
-    const data = dataDb.docs.map((productDb) => {
-      return { id: productDb.id, ...productDb.data() };
-    })
-
-    setCartas(data);
-  }
+      const data = dataDb.docs.map((productDb) => {
+        return { id: productDb.id, ...productDb.data() };
+      })
+      setCartas(data);
+    } catch (error) {
+      console.log(error)
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
