@@ -1,26 +1,32 @@
 import { useState, useEffect } from "react";
-import obtenerProductos from "../../data/cartas.js";
 import ItemDetailView from "./ItemDetailView.jsx";
 import useLoading from "../../hooks/useLoading.jsx";
 import { useParams } from "react-router-dom";
 import { BeatLoader } from "react-spinners";
+import { getDoc, doc } from "firebase/firestore";
+import db from "../../db/db.js";
 
 const ItemDetailContainer = () => {
 	const [carta, setCartas] = useState({})
 	const { loading, loadingOn, loadingOff } = useLoading();
 	const { idCarta } = useParams();
 
+	const getProduct = async() => {
+		const docRef = doc(db, "productos", idCarta)
+		const dataDb = await getDoc(docRef)
+		const data = { id: dataDb.id, ...dataDb.data() }
+
+		setCartas(data)
+	}
+
 	useEffect( () => {
-		loadingOn()
-		obtenerProductos()
-			.then((data)=> {
-				const cartaEncontrada = data.find( (cartaData) => cartaData.id === idCarta)
-				setCartas(cartaEncontrada)
-			})
-			.finally(() => {
-				loadingOff()
-			})
-		}, [] )
+		const fetchProduct = async () => {
+			loadingOn();
+			await getProduct();
+			loadingOff();
+		};
+		fetchProduct();
+		}, [idCarta] )
 
 	return (
 		<div>	
