@@ -19,7 +19,7 @@ function App() {
           <ToastContainer theme="dark" />
 
           <Routes>
-            <Route path="/" element={<ItemListContainer greeting={'Bienvenidos a mi Store de Pokemon'} />} />
+            <Route path="/" element={<ItemListContainer greeting={'Pokemon Store - EurEk4ards'} />} />
             <Route path="/categoria/:idCategoria" element={<ItemListContainer greeting={'Bienvenidos a mi Store de Pokemon'} />} />
             <Route path="/detalle/:idCarta" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />

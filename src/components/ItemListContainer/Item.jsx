@@ -21,10 +21,10 @@ const Item = ({ carta }) => {
 
 	return (
 		<Link to={`/detalle/${carta.id}`}>
-			<div onMouseOver={handleMouseOver} 
-			onMouseLeave={handleMouseLeave} 
-			className="card bg-secondary text-center align-items-center justify-content-center" 
-			style={estiloCard}>
+			<div onMouseOver={handleMouseOver}
+				onMouseLeave={handleMouseLeave}
+				className="card bg-secondary text-center align-items-center justify-content-center"
+				style={estiloCard}>
 				<img src={carta.imagen} alt="" style={{ maxWidth: '100px' }} className="card-img-top" />
 				<div className="card-body">
 					<p className="card-title">{carta.nombre}</p>

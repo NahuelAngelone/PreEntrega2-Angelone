@@ -2,7 +2,7 @@ import { useState } from "react"
 import CounterView from "./CounterView"
 
 const Counter = ({ stock, addToCart }) => {
-  const [contador, setContador] = useState(0)
+  const [contador, setContador] = useState(1)
 
   const sumar = () => {
     if(contador < stock) {

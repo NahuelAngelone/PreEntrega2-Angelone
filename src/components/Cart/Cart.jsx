@@ -26,14 +26,14 @@ const Cart = () => {
 						<p>Cantidad: {productoCarrito.cantidad}</p>
 						<p>Precio c/u: ${productoCarrito.precio}</p>
 						<p>Precio: ${productoCarrito.precio * productoCarrito.cantidad}</p>
-						<button onClick={ () => borrarProducto (productoCarrito.id)}>borrar</button>
+						<button className="btn btn-dark" onClick={ () => borrarProducto (productoCarrito.id)}>borrar</button>
 					</li>
 				))
 				}
 			</ul>
 			<h2>Precio Total: {precioTotal()} </h2>
-			<button onClick={vaciarCarrito}>Vaciar Carrito</button>
-			<Link to="/checkout">Checkout</Link>
+			<button className="btn btn-dark" onClick={vaciarCarrito}>Vaciar Carrito</button>
+			<Link className="btn btn-dark" to="/checkout">Checkout</Link>
 		</div>
 	)
 };

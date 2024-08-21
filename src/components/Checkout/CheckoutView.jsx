@@ -1,20 +1,63 @@
 const CheckoutView = ({ datosForm, handleChangeInput, handleSubmitForm }) => {
 	return (
 
-		<form onSubmit={handleSubmitForm}>
-			<label>Nombre:</label>
-			<input type="text" name="nombre" value={datosForm.nombre} onChange={handleChangeInput} />
+		<form onSubmit={handleSubmitForm} className="container mt-4">
+			<div className="mb-3">
+				<label htmlFor="nombre" className="form-label">Nombre:</label>
+				<input
+					type="text"
+					className="form-control"
+					id="nombre"
+					name="nombre"
+					value={datosForm.nombre}
+					onChange={handleChangeInput}
+					placeholder="Ingrese su nombre"
+				/>
+			</div>
 
-			<label>Telefono:</label>
-			<input type="text" name="telefono" value={datosForm.telefono} onChange={handleChangeInput} />
+			<div className="mb-3">
+				<label htmlFor="telefono" className="form-label">Telefono:</label>
+				<input
+					type="text"
+					className="form-control"
+					id="telefono"
+					name="telefono"
+					value={datosForm.telefono}
+					onChange={handleChangeInput}
+					placeholder="Ingrese su teléfono"
+				/>
+			</div>
 
-			<label>Email:</label>
-			<input type="text" name="email" value={datosForm.email} onChange={handleChangeInput} />
+			<div className="mb-3">
+				<label htmlFor="email" className="form-label">Email:</label>
+				<input
+					type="email"
+					className="form-control"
+					id="email"
+					name="email"
+					value={datosForm.email}
+					onChange={handleChangeInput}
+					placeholder="Ingrese su email"
+				/>
+			</div>
 
-			<label>Confirmacion de Email:</label>
-			<input type="text" name="emailConfirm" value={datosForm.emailConfirm} onChange={handleChangeInput} />
-
-			<button type="submit">Finalizar Compra</button>
+			<div className="mb-3">
+				<label htmlFor="emailConfirm" className="form-label">Confirmación de Email:</label>
+				<input
+					type="email"
+					className="form-control"
+					id="emailConfirm"
+					name="emailConfirm"
+					value={datosForm.emailConfirm}
+					onChange={handleChangeInput}
+					placeholder="Confirme su email"
+				/>
+			</div>
+			<div className="d-flex justify-content-center">
+				<button className="btn btn-dark" type="submit">
+					Finalizar Compra
+				</button>
+			</div>
 
 		</form>
 	)
